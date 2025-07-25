@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,100..1000&display=swap');
+
 @import "tailwindcss";
 
 @theme {
@@ -159,4 +161,5 @@
   margin: 0 auto;
   padding: 0;
   text-align: center;
+  font-family: 'Roboto Flex', sans-serif;
 }

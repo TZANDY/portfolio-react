@@ -12,6 +12,7 @@ const navItems = [
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  
 
   useEffect(() => {
     const handleScroll = () => {

@@ -18,9 +18,6 @@ export default function ContactSection() {
     const serviceid = import.meta.env.VITE_SERVICE_ID;
     const templateid = import.meta.env.VITE_TEMPLATE_ID ;
     const publickey = import.meta.env.VITE_EMAIL_PUBLIC_KEY;
-    console.log(`Service ID: ${serviceid}`);
-    console.log(`Template ID: ${templateid}`);
-    console.log(`Public Key: ${publickey}`);
 
     // Handle form submission logic here
     emailjs
@@ -50,6 +47,7 @@ export default function ContactSection() {
       ).finally(() => {
         setIsSubmitting(false);
       });
+    e.currentTarget.reset();
   };
 
   return (
@@ -121,6 +119,7 @@ export default function ContactSection() {
                   target="_blank"
                   rel="noopener noreferrer"
                   title="LinkedIn"
+                  className="text-muted-foreground hover:text-primary transition-colors"
                 >
                   <Linkedin />
                 </a>
@@ -129,6 +128,7 @@ export default function ContactSection() {
                   target="_blank"
                   rel="noopener noreferrer"
                   title="Instagram"
+                  className="text-muted-foreground hover:text-primary transition-colors"
                 >
                   <Instagram />
                 </a>

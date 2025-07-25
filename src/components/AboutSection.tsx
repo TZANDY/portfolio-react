@@ -1,10 +1,14 @@
 import { Briefcase, Code, Cpu } from "lucide-react";
 import { motion } from "motion/react";
 import { useTranslation } from "react-i18next";
+// Import cv from public folder
+import cvEs from "@/assets/docs/cv_es.pdf";
+import cvEn from "@/assets/docs/cv_en.pdf";
 
 export default function AboutSection() {
   const { t } = useTranslation();
   const about = t("about").split(" ");
+
   return (
     <section id="about" className="py-24 px-4 relative">
       <div className="container mx-auto max-w-5xl">
@@ -28,7 +32,9 @@ export default function AboutSection() {
                 {t("aboutButtonContact")}
               </motion.a>
               <motion.a
-              href="#"
+                href={t("cvLanguage") === "en" ? cvEn : cvEs}
+                target="_blank"
+                rel="noopener noreferrer"
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.95 }}
                 onHoverStart={() => console.log("hover started!")}

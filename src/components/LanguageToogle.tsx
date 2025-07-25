@@ -22,7 +22,7 @@ export default function LanguageToggle() {
         "fixed flex gap-1 items-center max-sm:hidden top-4 right-15 z-50 p-2 rounded-full transition-colors duration-300",
         "focus:outlin-hidden"
       )}>
-      <Globe className="h-5 w-5" />
+      <Globe className="h-5 w-5 text-foreground/80" />
       <select
         title="Select Language"
         className={cn(

@@ -48,6 +48,7 @@ i18n
           toastSuccessDescription: "Thank you for reaching out! I will get back to you soon.",
           toastErrorTitle: "Error",
           toastErrorDescription: "There was an error sending your message. Please try again later.",
+          cvLanguage: "en",
         },
       },
       es: {
@@ -89,6 +90,7 @@ i18n
           toastSuccessDescription: "¡Gracias por contactarme! Me pondré en contacto contigo pronto.",
           toastErrorTitle: "Error",
           toastErrorDescription: "Hubo un error al enviar tu mensaje. Por favor, inténtalo de nuevo más tarde.",
+          cvLanguage: "es",
         },
       },
     },
