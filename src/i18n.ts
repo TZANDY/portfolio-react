@@ -11,6 +11,10 @@ i18n
     resources: {
       en: {
         translation: {
+          navHome: "Home",
+          navAbout: "About",
+          navProjects: "Projects",
+          navContact: "Contact",
           greeting: "Hi!, I'm",
           heroDescription: "Crafting elegant and functional web experiences with passion and precision.",
           heroButton: "View My Work",
@@ -49,10 +53,15 @@ i18n
           toastErrorTitle: "Error",
           toastErrorDescription: "There was an error sending your message. Please try again later.",
           cvLanguage: "en",
+
         },
       },
       es: {
         translation: {
+          navHome: "Inicio",
+          navAbout: "Sobre mí",
+          navProjects: "Proyectos",
+          navContact: "Contacto",
           greeting: "¡Hola!, soy",
           heroDescription: "Creando experiencias web elegantes y funcionales con pasión y precisión.",
           heroButton: "Ver Mi Trabajo",

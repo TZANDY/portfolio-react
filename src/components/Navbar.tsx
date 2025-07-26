@@ -1,6 +1,7 @@
 import { cn } from "@/lib/utils";
 import { Menu, X } from "lucide-react";
 import { useEffect, useState } from "react";
+import { useTranslation } from "react-i18next";
 
 const navItems = [
   { name: "Home", href: "#hero" },
@@ -12,7 +13,7 @@ const navItems = [
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  
+  const { t } = useTranslation();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -24,7 +25,7 @@ export default function Navbar() {
   }, []);
 
   return (
-      <nav
+    <nav
       className={cn(
         "fixed w-full z-40 transition-all duration-300 bg-background/95",
         isScrolled ? "py-3 shadow-xs" : "py-5"
@@ -36,20 +37,23 @@ export default function Navbar() {
           className="text-xl font-bold text-primary flex items-center"
         >
           <span className="relative z-10">
-            <span className="text-glow text-foreground"> andi is.</span>
-            dev
+            <span className="text-glow text-foreground"> andi.is.</span>dev
           </span>
         </a>
 
         {/*desktop nav*/}
-        <div className="hidden md:flex space-x-8 mr-32">
+        <div className="hidden md:flex space-x-8 mr-36">
           {navItems.map((item, key) => (
-            <a
+           <a
               href={item.href}
               key={key}
-              className="text-foreground/80 hover:text-primary transition-colors duration-300"
+              className="group relative inline-block text-foreground/80 hover:text-primary transition-colors duration-300"
             >
-              {item.name}
+              <span className="text-glow">
+                {t(`nav${item.name}`) || item.name}
+              </span>
+              {/* Add underline effect on hover */}
+              <span className={cn("absolute inset-x-0 bottom-0 h-0.5 bg-indigo-400 origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-400")}></span>
             </a>
           ))}
         </div>

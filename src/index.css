@@ -21,6 +21,8 @@
   --animate-fade-in-delay-4: fade-in 0.7s ease-out 0.8s forwards;
   --animate-meteor: meteor 5s linear infinite;
 
+  --bg-underline-color: hsl(var(--underline-color));
+
   @keyframes float {
     0%,
     100% {
@@ -75,6 +77,8 @@
     --primary-foreground: 210 40% 98%;
 
     --border: 214 32% 91%;
+
+    --underline-color: red;
   }
 
   .dark {

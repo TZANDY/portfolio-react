@@ -25,6 +25,7 @@ export const HeroSection = () => {
             <p className="text-lg md:text-xl text-foreground/80 opacity-0 animate-fade-in-delay-3">
               {t("heroDescription")}
             </p>
+            
             <div>
               <motion.a
                 href="#projects"
