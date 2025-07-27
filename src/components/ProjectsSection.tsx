@@ -18,7 +18,7 @@ const projects: Project[] = [
     description:
       "A comprehensive e-commerce platform for medical supplies, featuring user-friendly navigation, secure payment processing, and a robust inventory management system.",
     link: "https://143.208.134.149/web2",
-    github: "#",
+    github: "https://github.com/TZANDY/Alfaro-Core",
     image: "/img/e-comerce.png",
     tags: [".Net 5", "C#", "jQuery", "Bootstrap", "SQL Server","REST API"],
   },
@@ -27,8 +27,8 @@ const projects: Project[] = [
     title: "Sales Management System for Medical Representatives",
     description:
       "A sales management system designed for medical representatives, enabling efficient tracking of sales activities, client interactions, and performance analytics.",
-    link: "#",
-    github: "#",
+    link: "https://143.208.134.149/pedidosWeb",
+    github: "https://github.com/TZANDY/AlfaroPedidos",
     image: "/img/sellers-platform.png",
     tags: [".Net 8", "C#", "jQuery", "Bootstrap", "SQL Server","REST API"],
   },
@@ -38,19 +38,19 @@ const projects: Project[] = [
     description:
       "A pilot project for a preform management system, focusing on streamlining the production process, enhancing quality control, and improving operational efficiency.",
     link: "https://143.208.134.149/cotizadordda",
-    github: "#",
+    github: "https://github.com/TZANDY/Simulator",
     image: "/img/cotizador.png", 
     tags: [".Net 8", "C#", "jQuery", "Bootstrap", "SQL Server","REST API"],
   },
   {
     id: 4,
-    title: "Medical Inventory Management System",
+    title: "Portfolio",
     description:
-      "An inventory management system tailored for the medical industry, providing real-time tracking of stock levels, automated reordering, and detailed reporting.",
-    link: "#",
-    github: "#",
-    image: "/img/medical.jpg",
-    tags: [".Net 8", "C#", "jQuery", "Bootstrap", "SQL Server","REST API"],
+      "A personal portfolio showcasing projects, skills, and professional achievements, designed to highlight expertise in web development and software engineering.",
+    link: "https://portfolio-react-six-dun.vercel.app/",
+    github: "https://github.com/TZANDY/portfolio-react",
+    image: "/img/portfolio.png",
+    tags: ["React", "TypeScript", "Tailwind CSS", "i18next","Vite","React Router"],
   },
   {
     id: 5,
@@ -58,7 +58,7 @@ const projects: Project[] = [
     description:
       " A time analysis tool designed for employees, allowing them to track their work hours, analyze productivity patterns, and generate reports for performance evaluation.",
     link: "#",
-    github: "#",
+    github: "https://github.com/TZANDY/TimeAnalyzerApp",
     image: "/img/time-analyzer.jpeg",
     tags: [".Net 8", "C#", "jQuery", "Bootstrap", "SQL Server","REST API"],
   },

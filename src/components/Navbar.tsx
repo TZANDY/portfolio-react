@@ -53,7 +53,7 @@ export default function Navbar() {
                 {t(`nav${item.name}`) || item.name}
               </span>
               {/* Add underline effect on hover */}
-              <span className={cn("absolute inset-x-0 bottom-0 h-0.5 bg-indigo-400 origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-400")}></span>
+              <span className={cn("absolute inset-x-0 bottom-0 h-0.5  bg-violet-400/70 origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-400")}></span>
             </a>
           ))}
         </div>
