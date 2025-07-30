@@ -64,12 +64,12 @@ const projects: Project[] = [
   },
   {
     id: 6,    
-    title: "Portal Administration System",
+    title: "Portal Administration for E-commerce Platform",
     description:
-      "A portal administration system for managing user access, content moderation, and system configurations, ensuring a secure and efficient online environment.",
-    link: "#",
+      "A portal administration system for managing content moderation, and system configurations, ensuring a secure and efficient online environment.",
+    link: "http://143.208.134.147/web2admin",
     github: "#",
-    image: "/img/medical.jpg",
+    image: "/img/portal-warria-2.png",
     tags: [".Net 8", "C#", "jQuery", "Bootstrap", "SQL Server","REST API"],
   },
 ];

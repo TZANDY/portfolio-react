@@ -4,19 +4,50 @@ import { useToast } from "@/hooks/use-toast";
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
 import emailjs from "@emailjs/browser"
+import { motion } from "motion/react";
 
 export default function ContactSection() {
   const { t } = useTranslation();
   const contact = t("contact").split(" ");
   const { toast } = useToast();
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
+  const [touched, setTouched] = useState({
+    name:false,
+    email:false,
+    message:false
+  });
   const [isSubmitting, setIsSubmitting] = useState(false);
+
+  const handleBlur = (field: keyof typeof touched) =>{
+    setTouched((prev) =>({
+      ...prev,
+      [field]:true
+    }))
+  }
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setIsSubmitting(true);
+    setTouched({
+      name:true,
+      email:true,
+      message:true
+    })
+
+    if(!name.trim() || !email.trim() || !message.trim()) {
+      toast({
+        title: t("toastErrorValidationTitle"),
+        description: t("toastErrorValidationDescription"),
+        duration: 4000,
+      });
+      setIsSubmitting(false);
+      return;
+    }
 
     const serviceid = import.meta.env.VITE_SERVICE_ID;
-    const templateid = import.meta.env.VITE_TEMPLATE_ID ;
+    const templateid = import.meta.env.VITE_TEMPLATE_ID;
     const publickey = import.meta.env.VITE_EMAIL_PUBLIC_KEY;
 
     // Handle form submission logic here
@@ -151,10 +182,26 @@ export default function ContactSection() {
                   type="text"
                   id="name"
                   name="name"
-                  className="w-full px-4 py-3 rounded-md border border-input bg-background focus:outline-hidden foucs:ring-2 focus:ring-primary"
+                  className="w-full px-4 py-3 rounded-md border border-input bg-background focus:outline-hidden focus:ring-2 focus:ring-primary"
+                  value={name}
+                  onBlur={() => handleBlur('name')}
+                  onChange={(e) =>
+                    setName(e.target.value)
+                  }
                   placeholder="Enter your name"
                   required
                 />
+                {touched.name && !name.trim() && (
+                  // add animation to the error message
+                  <motion.div
+                    className="text-red-500"
+                    initial={{ opacity: 0, y: -10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: -10 }}
+                  >
+                    {t("contactErrorName")}
+                  </motion.div>
+                  )}
               </div>
               <div>
                 <label
@@ -169,8 +216,12 @@ export default function ContactSection() {
                   name="email"
                   className="w-full px-4 py-3 rounded-md border border-input bg-background focus:outline-hidden focus:ring-2 focus:ring-primary"
                   placeholder="Enter your email"
+                  value={email}
+                  onBlur={() => handleBlur('email')}
+                  onChange={(e) => setEmail(e.target.value)}
                   required
                 />
+                {touched.email && !email.trim() && <span className="text-red-500">{t("contactErrorEmail")}</span>}
               </div>
               <div>
                 <label
@@ -184,8 +235,12 @@ export default function ContactSection() {
                   name="message"
                   className="w-full px-4 py-3 rounded-md border border-input bg-background focus:outline-hidden focus:ring-2 focus:ring-primary resize-none"
                   placeholder="Type your message here"
+                  value={message}
+                  onBlur={() => handleBlur('message')}
+                  onChange={(e)=>setMessage(e.target.value)}
                   required
                 />
+                {touched.message && !message.trim() && <span className="text-red-500">{t("contactErrorMessage")}</span>}
               </div>
               <button
                 type="submit"
