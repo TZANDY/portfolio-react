@@ -221,7 +221,16 @@ export default function ContactSection() {
                   onChange={(e) => setEmail(e.target.value)}
                   required
                 />
-                {touched.email && !email.trim() && <span className="text-red-500">{t("contactErrorEmail")}</span>}
+                {touched.email && !email.trim() && (
+                  <motion.div
+                    className="text-red-500"
+                    initial={{ opacity: 0, y: -10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: -10 }}
+                  >
+                    {t("contactErrorEmail")}
+                  </motion.div>
+                )}
               </div>
               <div>
                 <label
@@ -240,7 +249,16 @@ export default function ContactSection() {
                   onChange={(e)=>setMessage(e.target.value)}
                   required
                 />
-                {touched.message && !message.trim() && <span className="text-red-500">{t("contactErrorMessage")}</span>}
+                {touched.message && !message.trim() && (
+                  <motion.div
+                    className="text-red-500"
+                    initial={{ opacity: 0, y: -10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: -10 }}
+                  >
+                    {t("contactErrorMessage")}
+                  </motion.div>
+                )}
               </div>
               <button
                 type="submit"
