@@ -52,12 +52,7 @@ export default function ContactSection() {
 
     // Handle form submission logic here
     emailjs
-      .sendForm(
-        serviceid,
-        templateid,
-        e.currentTarget,
-        publickey
-      )
+      .sendForm(serviceid, templateid, e.currentTarget, publickey)
       .then(
         (result) => {
           console.log(result.text);
@@ -75,10 +70,18 @@ export default function ContactSection() {
             duration: 4000,
           });
         }
-      ).finally(() => {
+      )
+      .finally(() => {
         setIsSubmitting(false);
+        setName("");
+        setEmail("");
+        setMessage("");
+        setTouched({
+          name: false,
+          email: false,
+          message: false,
+        });
       });
-    e.currentTarget.reset();
   };
 
   return (
