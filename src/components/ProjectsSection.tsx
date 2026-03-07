@@ -14,9 +14,10 @@ type Project = {
 const projects: Project[] = [
   {
     id : 1,
-    title: "Comprehensive Medical e-Commerce Platform",
+    // title: "Comprehensive Medical e-Commerce Platform",
+    title: "Warria v2.0",
     description:
-      "A comprehensive e-commerce platform for medical supplies, featuring user-friendly navigation, secure payment processing, and a robust inventory management system.",
+      "Sistema de ventas de productos médicos para clientes asociados, que centraliza la gestión de pedidos, campañas, documentación técnica y facturación.",
     link: "https://143.208.134.149/web2",
     github: "https://github.com/TZANDY/Alfaro-Core",
     image: "/img/e-comerce.png",
@@ -24,9 +25,9 @@ const projects: Project[] = [
   },
   {
     id: 2,
-    title: "Sales Management System for Medical Representatives",
+    title: "Sistema de Pedidos v1.0",
     description:
-      "A sales management system designed for medical representatives, enabling efficient tracking of sales activities, client interactions, and performance analytics.",
+      "Solución para representantes médicos y vendedores que optimiza la gestión de pedidos, el seguimiento de clientes y el análisis de resultados de ventas.",
     link: "https://143.208.134.149/pedidosWeb",
     github: "https://github.com/TZANDY/AlfaroPedidos",
     image: "/img/sellers-platform.png",
@@ -34,9 +35,9 @@ const projects: Project[] = [
   },
   {
     id: 3,
-    title: "Preform Management System Pilot",
+    title: "Cotizador DDA",
     description:
-      "A pilot project for a preform management system, focusing on streamlining the production process, enhancing quality control, and improving operational efficiency.",
+      "Un proyecto piloto para un sistema de gestión de preformas, enfocado en optimizar el proceso de producción, mejorar el control de calidad y aumentar la eficiencia operativa.",
     link: "https://143.208.134.149/cotizadordda",
     github: "https://github.com/TZANDY/Simulator",
     image: "/img/cotizador.png", 
@@ -46,7 +47,7 @@ const projects: Project[] = [
     id: 4,
     title: "Portfolio",
     description:
-      "A personal portfolio showcasing projects, skills, and professional achievements, designed to highlight expertise in web development and software engineering.",
+      "Un portafolio personal que muestra proyectos, habilidades y logros profesionales, diseñado para resaltar la experiencia en desarrollo web e ingeniería de software.",
     link: "https://portfolio-react-six-dun.vercel.app/",
     github: "https://github.com/TZANDY/portfolio-react",
     image: "/img/portfolio.png",
@@ -54,9 +55,9 @@ const projects: Project[] = [
   },
   {
     id: 5,
-    title: "Time Analyzer for employees",
+    title: "Time Analyzer v1.0",
     description:
-      " A time analysis tool designed for employees, allowing them to track their work hours, analyze productivity patterns, and generate reports for performance evaluation.",
+      "Una herramienta de análisis de tiempo diseñada para empleados, que les permite rastrear sus horas de trabajo, analizar patrones de productividad y generar informes para la evaluación del rendimiento.",  
     link: "#",
     github: "https://github.com/TZANDY/TimeAnalyzerApp",
     image: "/img/time-analyzer.jpeg",
@@ -64,14 +65,34 @@ const projects: Project[] = [
   },
   {
     id: 6,    
-    title: "Portal Administration for E-commerce Platform",
+    title: "Portal Warria v2.0",
     description:
-      "A portal administration system for managing content moderation, and system configurations, ensuring a secure and efficient online environment.",
+      "Un portal de administración para el sistema de ventas de productos médicos, que centraliza la gestión de pedidos, campañas, documentación técnica y facturación, optimizando la eficiencia operativa y mejorando la experiencia del usuario.",
     link: "http://143.208.134.147/web2admin",
     github: "#",
     image: "/img/portal-warria-2.png",
     tags: [".Net 8", "C#", "jQuery", "Bootstrap", "SQL Server","REST API"],
   },
+  {
+    id: 7,
+    title: "API REST Proveedores v1.0",
+    description:
+      "Una API REST de consulta de datos diseñada para proveedores, que les permite acceder a información relevante sobre sus productos e inventarios, facilitando la integración con sistemas de gestión y mejorando la eficiencia operativa.",
+    link: "#",
+    github: "#",
+    image: "/img/api-rest.jpg",
+    tags: ["API", "Data Analysis", "REST API", "JSON", ".Net 8", "SQL Server"],
+  },
+  {
+    id: 8,
+    title: "API REST Vendedores v1.0",
+    description:
+      "Una API REST de consulta de datos diseñada para analizar información de ventas y rendimiento de los vendedores, facilitando la toma de decisiones y mejorando la eficiencia operativa.",
+    link: "#",
+    github: "#",
+    image: "/img/api-rest.jpg",
+    tags: ["API", "Data Analysis", "REST API", "JSON", ".Net 8", "SQL Server"],
+  }
 ];
 
 export default function ProjectsSection() {

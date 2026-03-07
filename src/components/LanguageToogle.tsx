@@ -20,7 +20,7 @@ export default function LanguageToggle() {
   return (
     <div className={cn(
         "fixed flex gap-1 items-center max-sm:hidden top-4 right-15 z-50 p-2 rounded-full transition-colors duration-300",
-        "focus:outlin-hidden"
+        "focus:outline-hidden"
       )}>
       <Globe className="h-5 w-5 text-foreground/80" />
       <select
@@ -29,6 +29,7 @@ export default function LanguageToggle() {
           "bg-background text-foreground border border-foreground/20 rounded-md text-sm capitalize",
           "focus:outline-none focus:ring-2 focus:ring-primary"
         )}
+        value={i18n.language.split("-")[0]}
         onChange={(e) => handleLanguageChange(e.target.value)}
       >
         {languages.map((lang) => (
