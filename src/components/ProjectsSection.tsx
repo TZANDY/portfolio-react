@@ -12,87 +12,125 @@ type Project = {
 };
 
 const projects: Project[] = [
+  // --- APLICACIONES WEB MODERNAS (Frontend Modern Stack) ---
   {
-    id : 1,
-    // title: "Comprehensive Medical e-Commerce Platform",
-    title: "Warria v2.0",
+    id: 1,
+    title: "Cotizador DDA v2.0",
     description:
-      "Sistema de ventas de productos médicos para clientes asociados, que centraliza la gestión de pedidos, campañas, documentación técnica y facturación.",
-    link: "https://143.208.134.149/web2",
-    github: "https://github.com/TZANDY/Alfaro-Core",
-    image: "/img/e-comerce.png",
-    tags: [".Net 5", "C#", "jQuery", "Bootstrap", "SQL Server","REST API"],
+      "Plataforma web para la generación y gestión ágil de cotizaciones de productos médicos, permitiendo cálculos de costos precisos y flujos de trabajo optimizados.",
+    link: "http://143.208.134.146:8078/",
+    github: "#",
+    image: "/img/quotation_front.webp",
+    tags: ["React 19", "TypeScript", "TanStack Query", "TanStack Form", "Zustand", "REST API","Clean Architecture"],
   },
   {
     id: 2,
-    title: "Sistema de Pedidos v1.0",
+    title: "Admin DDA v1.0",
     description:
-      "Solución para representantes médicos y vendedores que optimiza la gestión de pedidos, el seguimiento de clientes y el análisis de resultados de ventas.",
-    link: "https://143.208.134.149/pedidosWeb",
-    github: "https://github.com/TZANDY/AlfaroPedidos",
-    image: "/img/sellers-platform.png",
-    tags: [".Net 8", "C#", "jQuery", "Bootstrap", "SQL Server","REST API"],
+      "Panel de administración centralizado para la gestión de usuarios, roles y permisos de acceso para las distintas plataformas corporativas.",
+    link: "#",
+    github: "#",
+    image: "/img/admin_dda.webp",
+    tags: ["React 19", "TypeScript", "TanStack Query", "Zustand", "REST API","Clean Architecture"],
   },
+
+  // --- ECOSISTEMA B2B & PLATAFORMAS CORE ---
   {
     id: 3,
-    title: "Cotizador DDA",
+    title: "Warria E-Commerce v2.0",
     description:
-      "Un proyecto piloto para un sistema de gestión de preformas, enfocado en optimizar el proceso de producción, mejorar el control de calidad y aumentar la eficiencia operativa.",
-    link: "https://143.208.134.149/cotizadordda",
-    github: "https://github.com/TZANDY/Simulator",
-    image: "/img/cotizador.png", 
-    tags: [".Net 8", "C#", "jQuery", "Bootstrap", "SQL Server","REST API"],
+      "Plataforma B2B de venta de productos médicos para clientes asociados, integrando catálogo, pedidos, campañas comerciales, documentación técnica y facturación.",
+    link: "https://143.208.134.149/web2",
+    github: "https://github.com/TZANDY/Alfaro-Core",
+    image: "/img/e-comerce.png",
+    tags: [".NET 5", "C#", "jQuery", "Bootstrap", "SQL Server", "REST API","Clean Architecture"],
   },
   {
     id: 4,
-    title: "Portfolio",
+    title: "Portal Admin Warria v2.0",
     description:
-      "Un portafolio personal que muestra proyectos, habilidades y logros profesionales, diseñado para resaltar la experiencia en desarrollo web e ingeniería de software.",
-    link: "https://portfolio-react-six-dun.vercel.app/",
-    github: "https://github.com/TZANDY/portfolio-react",
-    image: "/img/portfolio.png",
-    tags: ["React", "TypeScript", "Tailwind CSS", "i18next","Vite","React Router"],
-  },
-  {
-    id: 5,
-    title: "Time Analyzer v1.0",
-    description:
-      "Una herramienta de análisis de tiempo diseñada para empleados, que les permite rastrear sus horas de trabajo, analizar patrones de productividad y generar informes para la evaluación del rendimiento.",  
-    link: "#",
-    github: "https://github.com/TZANDY/TimeAnalyzerApp",
-    image: "/img/time-analyzer.jpeg",
-    tags: [".Net 8", "C#", "jQuery", "Bootstrap", "SQL Server","REST API"],
-  },
-  {
-    id: 6,    
-    title: "Portal Warria v2.0",
-    description:
-      "Un portal de administración para el sistema de ventas de productos médicos, que centraliza la gestión de pedidos, campañas, documentación técnica y facturación, optimizando la eficiencia operativa y mejorando la experiencia del usuario.",
+      "Backoffice administrativo para el control operativo del e-commerce médico, facilitando la gestión centralizada de catálogos, aprobación de pedidos y facturación.",
     link: "http://143.208.134.147/web2admin",
     github: "#",
     image: "/img/portal-warria-2.png",
-    tags: [".Net 8", "C#", "jQuery", "Bootstrap", "SQL Server","REST API"],
+    tags: [".NET 8", "C#", "jQuery", "Bootstrap", "SQL Server", "REST API","Clean Architecture"],
+  },
+  {
+    id: 5,
+    title: "Sistema de Pedidos v1.0",
+    description:
+      "Solución web para representantes de ventas y médicos que agiliza la toma de pedidos en campo, seguimiento de clientes y análisis de resultados comerciales.",
+    link: "https://143.208.134.149/pedidosWeb",
+    github: "https://github.com/TZANDY/AlfaroPedidos",
+    image: "/img/sellers-platform.png",
+    tags: [".NET 8", "C#", "jQuery", "Bootstrap", "SQL Server", "REST API"],
+  },
+
+  // --- SERVICIOS & APIS BACKEND ---
+  {
+    id: 6,
+    title: "AlfaMail API v1.0",
+    description:
+      "Microservicio para el envío masivo y transaccional de correos electrónicos automatizados mediante plantillas dinámicas Scriban.",
+    link: "#",
+    github: "#",
+    image: "/img/api-rest.jpg",
+    tags: [".NET 8", "C#", "Clean Architecture", "Scriban", "REST API"],
   },
   {
     id: 7,
     title: "API REST Proveedores v1.0",
     description:
-      "Una API REST de consulta de datos diseñada para proveedores, que les permite acceder a información relevante sobre sus productos e inventarios, facilitando la integración con sistemas de gestión y mejorando la eficiencia operativa.",
+      "Servicio de consulta e integración de datos que permite a proveedores externos acceder en tiempo real a información de inventarios y estado de productos.",
     link: "#",
     github: "#",
     image: "/img/api-rest.jpg",
-    tags: ["API", "Data Analysis", "REST API", "JSON", ".Net 8", "SQL Server"],
+    tags: [".NET 8", "C#", "SQL Server", "REST API", "Data Analysis","Clean Architecture"],
   },
   {
     id: 8,
     title: "API REST Vendedores v1.0",
     description:
-      "Una API REST de consulta de datos diseñada para analizar información de ventas y rendimiento de los vendedores, facilitando la toma de decisiones y mejorando la eficiencia operativa.",
+      "API de analítica de datos enfocada en procesar el historial de ventas e indicadores de rendimiento comercial para la toma de decisiones.",
     link: "#",
     github: "#",
     image: "/img/api-rest.jpg",
-    tags: ["API", "Data Analysis", "REST API", "JSON", ".Net 8", "SQL Server"],
-  }
+    tags: [".NET 8", "C#", "SQL Server", "REST API", "Data Analysis","Clean Architecture"],
+  },
+
+  // --- HERRAMIENTAS INTERNAS & PILOTOS ---
+  {
+    id: 9,
+    title: "Time Analyzer v1.0",
+    description:
+      "Aplicación de monitoreo de tiempo para colaboradores, diseñada para rastrear horas de trabajo, patrones de productividad y generación de reportes.",
+    link: "#",
+    github: "https://github.com/TZANDY/TimeAnalyzerApp",
+    image: "/img/time-analyzer.jpeg",
+    tags: [".NET 8", "C#", "jQuery", "Bootstrap", "SQL Server", "REST API"],
+  },
+  {
+    id: 10,
+    title: "Cotizador DDA v1.0",
+    description:
+      "Sistema de simulación y gestión de preformas orientado al control de costos de producción y trazabilidad de calidad.",
+    link: "https://143.208.134.149/cotizadordda",
+    github: "https://github.com/TZANDY/Simulator",
+    image: "/img/cotizador.png",
+    tags: [".NET 8", "C#", "jQuery", "Bootstrap", "SQL Server", "REST API"],
+  },
+
+  // --- PORTAFOLIO PERSONAL ---
+  {
+    id: 11,
+    title: "Portfolio Personal",
+    description:
+      "Aplicación web interactiva y multiidioma diseñada para presentar proyectos, habilidades e itinerario profesional con enfoque en rendimiento.",
+    link: "https://portfolio-react-six-dun.vercel.app/",
+    github: "https://github.com/TZANDY/portfolio-react",
+    image: "/img/portfolio.png",
+    tags: ["React", "TypeScript", "Tailwind CSS", "i18next", "Vite", "React Router"],
+  },
 ];
 
 export default function ProjectsSection() {

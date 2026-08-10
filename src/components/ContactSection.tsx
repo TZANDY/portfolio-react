@@ -1,4 +1,4 @@
-import { Instagram, Linkedin, Mail, MapPin, Phone, Send } from "lucide-react";
+import { Instagram, Linkedin, Mail, MapPin, MessagesSquare, Send } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { useToast } from "@/hooks/use-toast";
 import { useState } from "react";
@@ -83,6 +83,9 @@ export default function ContactSection() {
         });
       });
   };
+  const phoneNumber = "51923408068"; // Replace with your phone number
+  const messageWhatsApp = "Hello, I would like to get in touch with you."; // Replace with your message
+  const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(messageWhatsApp)}`;
 
   return (
     <section id="contact" className="py-24 px-4 relative">
@@ -118,15 +121,17 @@ export default function ContactSection() {
               </div>
               <div className="flex items-start space-x-4">
                 <div className="p-3 rounded-full bg-primary/10">
-                  <Phone className="h-6 w-6 text-primary" />
+                  <MessagesSquare className="h-6 w-6 text-primary" />
                 </div>
                 <div className="flex flex-col items-start space-x-4">
                   <h4 className="font-medium">{t("contactPhone")}</h4>
                   <a
-                    href="tel:+51484-8197"
+                    href={url}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="text-muted-forground hover:text-primary transition-colors"
                   >
-                    +51 484-8197
+                    WhatsApp
                   </a>
                 </div>
               </div>
@@ -138,6 +143,8 @@ export default function ContactSection() {
                   <h4 className="font-medium">{t("contactLocation")}</h4>
                   <a
                     href="https://maps.app.goo.gl/RjG2ES9wJDG2mRT59"
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="text-muted-forground hover:text-primary transition-colors"
                   >
                     Lima, Perú
