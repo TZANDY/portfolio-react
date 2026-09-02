@@ -2,6 +2,7 @@ import { ArrowRight, ExternalLink, Github } from "lucide-react";
 import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 import ProjectCardSkeleton from "./skeleton/ProjectCardSkeleton";
+import axios from "axios";
 
 type Project = {
   id: number;
@@ -32,13 +33,8 @@ type Project = {
         }
     ]*/
 const fetchProjects = async (): Promise<Project[]> => {
-  const response = await fetch("/api/projects-technologies");
-  if (!response.ok) {
-    throw new Error("Could not load projects");
-  }
-
-  const data = await response.json();
-  return Array.isArray(data.data) ? data.data : [];
+  const response = await axios.get("https://portfolio-api.tzandy07.workers.dev/api/projects-technologies");
+  return Array.isArray(response.data.data) ? response.data.data : [];
 };
 
 export default function ProjectsSection() {

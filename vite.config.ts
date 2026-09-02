@@ -11,22 +11,22 @@ export default defineConfig({
       '@': path.resolve(__dirname, './src'),
     },
   },
-  server: {
-    proxy: {
-      '/api': {
-        target: 'https://portfolio-api.tzandy07.workers.dev',
-        changeOrigin: true,
-        secure: true,
-      },
-    },
-  },
-  preview: {
-    proxy: {
-      '/api': {
-        target: 'https://portfolio-api.tzandy07.workers.dev',
-        changeOrigin: true,
-        secure: true,
-      },
-    },
-  },
+  // server: {
+  //   proxy: {
+  //     '/api': {
+  //       target: 'https://portfolio-api.tzandy07.workers.dev',
+  //       changeOrigin: true,
+  //       secure: true,
+  //     },
+  //   },
+  // },
+  // preview: {
+  //   proxy: {
+  //     '/api': {
+  //       target: 'https://portfolio-api.tzandy07.workers.dev',
+  //       changeOrigin: true,
+  //       secure: true,
+  //     },
+  //   },
+  // },
 })
