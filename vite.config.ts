@@ -6,10 +6,27 @@ import path from 'path'
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [react(), tailwindcss()],
-  resolve:{
+  resolve: {
     alias: {
       '@': path.resolve(__dirname, './src'),
     },
-  }
-  
+  },
+  server: {
+    proxy: {
+      '/api': {
+        target: 'https://portfolio-api.tzandy07.workers.dev',
+        changeOrigin: true,
+        secure: true,
+      },
+    },
+  },
+  preview: {
+    proxy: {
+      '/api': {
+        target: 'https://portfolio-api.tzandy07.workers.dev',
+        changeOrigin: true,
+        secure: true,
+      },
+    },
+  },
 })

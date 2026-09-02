@@ -32,7 +32,7 @@ type Project = {
         }
     ]*/
 const fetchProjects = async (): Promise<Project[]> => {
-  const response = await fetch("https://portfolio-api.tzandy07.workers.dev/api/projects-technologies");
+  const response = await fetch("/api/projects-technologies");
   if (!response.ok) {
     throw new Error("Could not load projects");
   }
