@@ -14,24 +14,6 @@ type Project = {
   technologies: string[];
 };
 
-
-/* "data": [
-        {
-            "id": 2,
-            "title": "Cotizador DDA v2.0",
-            "description": "Plataforma web para la generación y gestión ágil de cotizaciones de productos médicos, permitiendo cálculos de costos precisos y flujos de trabajo optimizados.",
-            "imageUrl": "https://www.andiis.dev/img/quotation_front.webp",
-            "demoUrl": "",
-            "url": "http://143.208.134.146:8078/",
-            "repoUrl": "#",
-            "createdAt": "2026-08-30T18:29:40.000Z",
-            "technologies": [
-                "SQL Server",
-                "C#",
-                "React 19"
-            ]
-        }
-    ]*/
 const fetchProjects = async (): Promise<Project[]> => {
   const response = await axios.get("https://portfolio-api.tzandy07.workers.dev/api/projects-technologies");
   return Array.isArray(response.data.data) ? response.data.data : [];
